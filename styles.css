@@ -13,3 +13,25 @@
 @media(max-width:760px){.hero-foot{font-size:9px}.project-bottom{font-size:9px}}
 @media(max-width:420px){.hero-foot{font-size:9px}}
 @media(max-width:600px){.contact-actions{align-items:flex-start;flex-direction:column;gap:18px}}
+
+.gallery-label{display:flex;justify-content:space-between;gap:18px;margin:0 0 12px;color:#738078;font:10px var(--mono);letter-spacing:.1em}
+.gallery-label span{color:#8d9890}
+.project-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:38px}
+.project-tile{display:flex;flex-direction:column;min-width:0;padding:13px;background:#f8f8f4;color:var(--ink);text-decoration:none;border:1px solid rgba(23,33,29,.08);transition:transform .2s ease,border-color .2s ease}
+.project-tile:hover{transform:translateY(-4px);border-color:rgba(23,33,29,.25)}
+.project-tile:focus-visible{outline:3px solid #739b43;outline-offset:3px}
+.tile-art{height:224px;position:relative;display:block;overflow:hidden;background:#e4dff4}
+.tile-noon .tile-art{background:#d9e3ed}
+.tile-square .tile-art{background:#e9e5db}
+.tile-shot{position:absolute;bottom:-13px;width:29%;height:190px;object-fit:cover;object-position:center 28%;border:4px solid #111815;border-bottom-width:8px;border-radius:13px;background:#111815;box-shadow:0 7px 22px rgba(16,23,19,.2)}
+.tile-shot-left{left:8%;transform:rotate(-8deg)}
+.tile-shot-center{left:35.5%;z-index:1;bottom:-4px;height:204px}
+.tile-shot-right{right:8%;transform:rotate(8deg)}
+.tile-meta,.tile-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;font:9px var(--mono);letter-spacing:.06em;color:#78847a}
+.tile-meta{padding:17px 2px 9px}
+.tile-title{font:600 25px/1.15 var(--display);letter-spacing:-.045em;padding:0 2px}
+.tile-copy{font-size:12px;line-height:1.55;color:#657169;padding:8px 2px 17px;min-height:62px}
+.tile-footer{margin-top:auto;border-top:1px solid var(--line);padding:13px 2px 2px;font-size:9px}
+.tile-cta{color:#354139}
+@media(max-width:760px){.project-gallery{grid-template-columns:1fr;gap:12px}.project-tile{padding:12px}.tile-art{height:245px}.tile-shot{height:205px;width:27%}.tile-shot-center{height:220px}.tile-meta{font-size:10px}.tile-copy{font-size:14px;min-height:0}.tile-footer{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.project-tile{transition:none}.project-tile:hover{transform:none}}
