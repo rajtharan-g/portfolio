@@ -142,7 +142,7 @@
     </section>
 
     <section class="about-section wrap" id="about">
-      <div class="about-label"><p class="eyebrow">02 / HOW I WORK</p><span class="about-symbol">✳</span></div>
+      <div class="about-label"><p class="eyebrow">02 / HOW I WORK</p><div class="approach-list" aria-label="My engineering approach"><div class="approach-step"><span>01</span><p><b>Understand</b>Start with the product need.</p></div><div class="approach-step"><span>02</span><p><b>Build</b>Create a sound, maintainable foundation.</p></div><div class="approach-step"><span>03</span><p><b>Improve</b>Keep quality in focus as the product grows.</p></div></div></div>
       <div class="about-content"><h2>Good engineering should feel <em>simple.</em></h2><p class="about-intro">I’m a mobile engineer who cares about the whole product: a sound technical foundation, a smooth experience, and a team that can keep moving forward.</p><div class="skill-grid"><div><span>01</span><b>Mobile craft</b><p>Swift · SwiftUI · UIKit · Kotlin</p></div><div><span>02</span><b>Architecture</b><p>MVVM · Clean Architecture · Modular design</p></div><div><span>03</span><b>Quality & performance</b><p>Testing · Debugging · CI/CD · Optimization</p></div><div><span>04</span><b>Technical leadership</b><p>Reviews · Mentoring · Cross-functional work</p></div></div></div>
     </section>
 
@@ -161,7 +161,7 @@
           currentObserver.unobserve(entry.target);
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
-      document.querySelectorAll('.section-heading, .project-gallery, .project, .about-content, .contact-inner').forEach((element) => {
+      document.querySelectorAll('.section-heading, .project-gallery, .project, .about-label, .about-content, .contact-inner').forEach((element) => {
         element.classList.add('reveal-on-scroll');
         observer.observe(element);
       });
