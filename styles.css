@@ -149,7 +149,7 @@
 .testimonial-full[open] summary:after{content:"−"}
 .testimonial-full summary:hover{transform:translateY(-1px);background:#dfe9d6}
 .testimonial-card figcaption{margin-top:auto;padding-top:24px}
-@media(min-width:761px){.testimonial-card figcaption{min-height:66px;box-sizing:border-box}}
+@media(min-width:761px){.testimonial-card figcaption{height:88px;min-height:88px;flex:0 0 88px;box-sizing:border-box}}
 @media(prefers-reduced-motion:reduce){.testimonial-full summary:hover{transform:none}}
 
 /* Give How I Work one clear reading order: introduction, process, skills. */
