@@ -73,3 +73,16 @@
 .approach-step>span{padding-top:3px;color:#829270;font:10px var(--mono)}
 .approach-step p{margin:0;color:#69756c;font-size:11px;line-height:1.5}
 .approach-step b{display:block;margin-bottom:2px;color:var(--ink);font:600 13px var(--display)}
+.testimonials-section{padding:92px 0;background:#e9ece5}
+.testimonials-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
+.testimonials-heading .eyebrow{margin-bottom:16px}
+.testimonials-heading h2{margin:0;font:600 clamp(38px,5vw,54px)/1.05 var(--display);letter-spacing:-.06em}
+.testimonials-note{max-width:300px;margin:0 0 4px;color:#657169;font-size:13px;line-height:1.7}
+.testimonial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.testimonial-card{display:flex;flex-direction:column;margin:0;padding:25px 26px 20px;background:#f8f8f4;border:1px solid rgba(23,33,29,.08);border-top:2px solid #b9f36b}
+.testimonial-card blockquote{margin:0;color:#455148;font-size:13px;line-height:1.8}
+.testimonial-card figcaption{display:flex;flex-direction:column;gap:5px;margin-top:auto;padding-top:20px;color:#79857c;font-size:10px;line-height:1.5}
+.testimonial-card figcaption a{width:fit-content;color:var(--ink);font:600 13px var(--display);text-decoration:none}
+.testimonial-card figcaption a:hover{text-decoration:underline;text-underline-offset:3px}
+.testimonial-card time{font:9px var(--mono);letter-spacing:.04em;text-transform:uppercase}
+@media(max-width:760px){.testimonials-section{padding:70px 0}.testimonials-heading{align-items:start;flex-direction:column;gap:16px}.testimonial-grid{grid-template-columns:1fr}.testimonial-card{padding:22px 20px 18px}}

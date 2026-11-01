@@ -146,7 +146,23 @@
       <div class="about-content"><h2>Good engineering should feel <em>simple.</em></h2><p class="about-intro">I’m a mobile engineer who cares about the whole product: a sound technical foundation, a smooth experience, and a team that can keep moving forward.</p><div class="skill-grid"><div><span>01</span><b>Mobile craft</b><p>Swift · SwiftUI · UIKit · Kotlin</p></div><div><span>02</span><b>Architecture</b><p>MVVM · Clean Architecture · Modular design</p></div><div><span>03</span><b>Quality & performance</b><p>Testing · Debugging · CI/CD · Optimization</p></div><div><span>04</span><b>Technical leadership</b><p>Reviews · Mentoring · Cross-functional work</p></div></div></div>
     </section>
 
-    <section class="contact-section" id="contact"><div class="wrap contact-inner"><p class="eyebrow">03 / NEXT CHAPTER</p><h2>Let’s build something<br><em>that matters.</em></h2><p>Open to conversations about senior mobile engineering opportunities.</p><div class="contact-actions"><a class="button button-light" href="mailto:tharanit99@gmail.com"><svg class="icon"><use href="#icon-mail"></use></svg> Email Rajtharan <span aria-hidden="true">↗</span></a><a class="contact-link" href="tel:+919500243960"><svg class="icon"><use href="#icon-phone"></use></svg> Call +91 9500243960</a><a class="contact-link" href="https://www.linkedin.com/in/rajtharan-g/" target="_blank" rel="noreferrer"><svg class="icon"><use href="#icon-linkedin"></use></svg> Connect on LinkedIn</a><a class="contact-link" href="https://github.com/rajtharan-g" target="_blank" rel="noreferrer"><svg class="icon"><use href="#icon-github"></use></svg> View GitHub</a></div></div></section>
+    <section class="testimonials-section" aria-labelledby="testimonials-title">
+      <div class="wrap">
+        <div class="testimonials-heading"><div><p class="eyebrow">03 / RECOMMENDATIONS</p><h2 id="testimonials-title">Kind words<br>from colleagues.</h2></div><p class="testimonials-note">A little perspective from people I’ve had the chance to build with.</p></div>
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <blockquote>I had the opportunity to work with Rajtharan at both Mallow Technologies and the Square Off Chess project. He is a highly skilled mobile engineer with strong technical expertise in Swift and iOS development. Rajtharan consistently delivered reliable, high-quality solutions, approached complex problems with a practical mindset, and was always willing to help the team. He's a dependable engineer, a quick learner, and someone I'd gladly work with again.</blockquote>
+            <figcaption><a href="https://www.linkedin.com/in/bharathravindran/" target="_blank" rel="noreferrer">Bharath Ravinthiran <span aria-hidden="true">↗</span></a><span>Senior colleague · Mallow Technologies &amp; Square Off Chess</span><time datetime="2026-10-31">October 31, 2026</time></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>Rajtharan was the first iOS engineer joining ALLEN digital’s App team. He is key architect into shaping quite a robust iOS app. He posses deep iOS expertise. His passion for iOS was quite visible. His hard-work was instrumental into making sure we were able to launch App and further projects on time with high quality. He is true engineer with intent of continuous learning. he has gained expertise on AI assisted development as well.</blockquote>
+            <figcaption><a href="https://www.linkedin.com/in/raikva/" target="_blank" rel="noreferrer">Raikva Gandhi <span aria-hidden="true">↗</span></a><span>Engineering Leader, ALLEN · Direct manager</span><time datetime="2026-05-26">May 26, 2026</time></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="wrap contact-inner"><p class="eyebrow">04 / NEXT CHAPTER</p><h2>Let’s build something<br><em>that matters.</em></h2><p>Open to conversations about senior mobile engineering opportunities.</p><div class="contact-actions"><a class="button button-light" href="mailto:tharanit99@gmail.com"><svg class="icon"><use href="#icon-mail"></use></svg> Email Rajtharan <span aria-hidden="true">↗</span></a><a class="contact-link" href="tel:+919500243960"><svg class="icon"><use href="#icon-phone"></use></svg> Call +91 9500243960</a><a class="contact-link" href="https://www.linkedin.com/in/rajtharan-g/" target="_blank" rel="noreferrer"><svg class="icon"><use href="#icon-linkedin"></use></svg> Connect on LinkedIn</a><a class="contact-link" href="https://github.com/rajtharan-g" target="_blank" rel="noreferrer"><svg class="icon"><use href="#icon-github"></use></svg> View GitHub</a></div></div></section>
   </main>
 
   <footer class="site-footer wrap"><a class="wordmark" href="#top"><span class="mark">R</span><span>RAJTHARAN GOPAL</span></a><span>DESIGNED WITH CARE · <span id="year">2026</span></span><a href="#top">BACK TO TOP ↑</a></footer>
@@ -161,7 +177,7 @@
           currentObserver.unobserve(entry.target);
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
-      document.querySelectorAll('.section-heading, .project-gallery, .project, .about-label, .about-content, .contact-inner').forEach((element) => {
+      document.querySelectorAll('.section-heading, .project-gallery, .project, .about-label, .about-content, .testimonials-heading, .testimonial-card, .contact-inner').forEach((element) => {
         element.classList.add('reveal-on-scroll');
         observer.observe(element);
       });
