@@ -183,9 +183,8 @@
       const caseStudies = [...document.querySelectorAll('.case-details')];
       caseStudies.forEach((caseStudy) => {
         caseStudy.addEventListener('toggle', () => {
-          if (!caseStudy.open) return;
           caseStudies.forEach((otherCaseStudy) => {
-            if (otherCaseStudy !== caseStudy) otherCaseStudy.open = false;
+            if (otherCaseStudy !== caseStudy) otherCaseStudy.open = caseStudy.open;
           });
         });
       });
