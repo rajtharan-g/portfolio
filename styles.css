@@ -150,3 +150,14 @@
 .testimonial-full summary:hover{transform:translateY(-1px);background:#dfe9d6}
 .testimonial-card figcaption{margin-top:14px}
 @media(prefers-reduced-motion:reduce){.testimonial-full summary:hover{transform:none}}
+
+/* Give How I Work one clear reading order: introduction, process, skills. */
+.about-section{display:block;padding-top:110px;padding-bottom:110px}
+.about-overview{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:72px;margin:10px 0 46px}
+.approach-visual{padding-top:0}
+.skill-grid{grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.skill-grid>div{padding:19px 22px;border-bottom:0;border-right:1px solid var(--line)}
+.skill-grid>div:first-child{padding-left:0}
+.skill-grid>div:not(:first-child){padding-left:22px}
+.skill-grid>div:last-child{padding-right:0;border-right:0}
+@media(max-width:760px){.about-section{padding-top:72px;padding-bottom:72px}.about-overview{grid-template-columns:1fr;gap:26px;margin:8px 0 32px}.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skill-grid>div{padding:17px 12px;border-right:0;border-bottom:1px solid var(--line)}.skill-grid>div:nth-child(odd){padding-left:0;border-right:1px solid var(--line)}.skill-grid>div:nth-child(even){padding-left:12px}.skill-grid>div:nth-last-child(-n+2){border-bottom:0}.skill-grid>div:last-child{padding-right:0;border-right:0}}
