@@ -8,9 +8,9 @@ Open `index.html` in a browser.
 
 ## Publish with GitHub Pages
 
-1. Create a **public** GitHub repository named `Portfolio` and push this folder to its `main` branch.
+1. Create a **public** GitHub repository named `portfolio` and push this folder to its `main` branch.
 2. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-3. The workflow in `.github/workflows/deploy.yml` will publish the site. The project site URL will be `https://YOUR-USERNAME.github.io/Portfolio/`.
+3. The workflow in `.github/workflows/deploy.yml` will publish the site. The project site URL will be `https://YOUR-USERNAME.github.io/portfolio/`.
 
 After setup, each push to `main` automatically updates the live site.
 
