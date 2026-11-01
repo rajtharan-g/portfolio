@@ -12,3 +12,4 @@
 .media-gallery figcaption,.media-note{font-size:10px}
 @media(max-width:760px){.hero-foot{font-size:9px}.project-bottom{font-size:9px}}
 @media(max-width:420px){.hero-foot{font-size:9px}}
+@media(max-width:600px){.contact-actions{align-items:flex-start;flex-direction:column;gap:18px}}
