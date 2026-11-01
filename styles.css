@@ -88,11 +88,7 @@
 @media(max-width:760px){.testimonials-section{padding:70px 0}.testimonials-heading{align-items:start;flex-direction:column;gap:16px}.testimonial-grid{grid-template-columns:1fr}.testimonial-card{padding:22px 20px 18px}}
 
 /* Make the About and recommendations areas feel more visual and scannable. */
-.about-portrait{position:relative;overflow:hidden;aspect-ratio:1.55;margin:0 0 22px;background:#d9dfd5}
-.about-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 43%;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.about-portrait:hover img{transform:scale(1.035)}
-.about-portrait figcaption{position:absolute;right:0;bottom:0;left:0;display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:32px 14px 12px;background:linear-gradient(transparent,rgba(16,23,19,.8));color:#fff;font:10px var(--mono);letter-spacing:.07em}
-.about-portrait figcaption small{font:9px var(--mono);letter-spacing:.04em;color:rgba(255,255,255,.82)}
+.about-label{justify-content:flex-start;gap:28px}
 .approach-visual{position:relative;padding-top:10px}
 .approach-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .approach-track{position:absolute;top:37px;left:17%;right:17%;height:1px;background:rgba(23,33,29,.18);overflow:hidden}
@@ -130,6 +126,27 @@
 .testimonial-person a:hover{text-decoration:underline;text-underline-offset:3px}
 .testimonial-person small{display:block;max-width:270px;margin-top:4px;color:#79857c;font-size:10px;line-height:1.5}
 .testimonial-card time{white-space:nowrap;color:#7b877e;font:9px var(--mono);letter-spacing:.03em;text-transform:uppercase}
-@media(max-width:760px){.about-portrait{aspect-ratio:1.7}.testimonial-art{height:118px}.testimonial-card{padding:0 20px 18px}.testimonial-art{margin-inline:-20px;padding-inline:20px}}
-@media(max-width:420px){.about-portrait figcaption{align-items:flex-start;flex-direction:column;gap:4px}.testimonial-card figcaption{align-items:flex-start;flex-direction:column}.testimonial-card time{padding-left:0}}
-@media(prefers-reduced-motion:reduce){.approach-step:hover,.about-portrait:hover img{transform:none}}
+@media(max-width:760px){.testimonial-art{height:118px}.testimonial-card{padding:0 20px 18px}.testimonial-art{margin-inline:-20px;padding-inline:20px}}
+@media(max-width:420px){.testimonial-card figcaption{align-items:flex-start;flex-direction:column}.testimonial-card time{padding-left:0}}
+@media(prefers-reduced-motion:reduce){.approach-step:hover{transform:none}}
+
+/* Keep the portrait prominent at the top of the page. */
+.hero-card{isolation:isolate}
+.hero-portrait-wrap{position:absolute;z-index:0;inset:0 24px;overflow:hidden}
+.hero-portrait-wrap:after{position:absolute;inset:0;content:"";background:linear-gradient(180deg,rgba(16,23,19,.5),rgba(16,23,19,.08) 27%,transparent 43%,rgba(16,23,19,.78) 100%)}
+.hero-portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:center 39%}
+.hero-card .card-top{position:absolute;z-index:2;top:21px;right:24px;left:24px}
+.hero-card .card-label{position:absolute;z-index:2;right:24px;bottom:53px;left:24px;margin:0;color:#fff;font-size:19px}
+.hero-card .card-bottom{position:absolute;z-index:2;right:24px;bottom:18px;left:24px}
+
+/* Keep the recommendation action close to each quote and the cards compact. */
+.testimonial-grid{align-items:start}
+.testimonial-card{align-self:start}
+.testimonial-full{margin-top:8px}
+.testimonial-full summary{display:inline-flex;align-items:center;gap:5px;padding:7px 10px;border-radius:3px;background:#e9eee4;color:#506e3d;font:10px var(--mono);letter-spacing:.01em;list-style:none;transition:background-color .2s ease,transform .2s ease}
+.testimonial-full summary::-webkit-details-marker{display:none}
+.testimonial-full summary:after{content:"+";font:13px var(--sans);line-height:1}
+.testimonial-full[open] summary:after{content:"−"}
+.testimonial-full summary:hover{transform:translateY(-1px);background:#dfe9d6}
+.testimonial-card figcaption{margin-top:14px}
+@media(prefers-reduced-motion:reduce){.testimonial-full summary:hover{transform:none}}
