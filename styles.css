@@ -149,6 +149,7 @@
 .testimonial-full[open] summary:after{content:"−"}
 .testimonial-full summary:hover{transform:translateY(-1px);background:#dfe9d6}
 .testimonial-card figcaption{margin-top:auto;padding-top:24px}
+@media(min-width:761px){.testimonial-card figcaption{min-height:66px;box-sizing:border-box}}
 @media(prefers-reduced-motion:reduce){.testimonial-full summary:hover{transform:none}}
 
 /* Give How I Work one clear reading order: introduction, process, skills. */
@@ -220,16 +221,24 @@
 .highlight-card h3{margin:10px 0 5px;color:#f3f5f0;font:600 15px var(--display)}
 .highlight-card p{max-width:31ch;margin:0;color:#abb6ac;font-size:11px;line-height:1.6}
 .architecture-section{margin-top:38px}
-.architecture-section>.eyebrow{margin-bottom:13px}
+.architecture-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:17px}
+.architecture-heading .eyebrow{margin:0 0 7px;color:#b9f36b}
+.architecture-heading h3{margin:0;color:#f4f4ef;font:600 clamp(24px,3vw,32px)/1.08 var(--display);letter-spacing:-.045em}
+.architecture-heading>p{max-width:300px;margin:0 0 2px;color:#aeb8ae;font-size:11px;line-height:1.65}
 .architecture-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.architecture-card{margin:0;padding:18px 19px 19px;background:#f8f8f4;border:1px solid rgba(244,244,239,.12);border-radius:4px}
-.architecture-card figcaption{margin-bottom:5px;color:#17211d;font:600 14px var(--display)}
-.architecture-summary{margin:0 0 15px;color:#69756c;font-size:10px;line-height:1.5}
-.architecture-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:18px;margin:0;padding:0;list-style:none}
-.architecture-flow li{position:relative;display:flex;min-height:60px;flex-direction:column;justify-content:center;gap:5px;padding:9px 10px;border:1px solid #dce2d8;border-radius:3px;background:#fff;color:#17211d;text-align:left}
-.architecture-flow li strong{font:600 11px/1.3 var(--display)}
-.architecture-flow li small{color:#6e7b70;font:9px/1.35 var(--mono)}
-.architecture-flow li:not(:last-child):after{position:absolute;top:50%;right:-16px;color:#729450;font:14px var(--sans);content:"→";transform:translateY(-50%)}
+.architecture-card{position:relative;margin:0;padding:19px 18px 18px;overflow:hidden;background:linear-gradient(145deg,#fbfcf8,#eef2e9);border:1px solid rgba(244,244,239,.18);border-top:3px solid #b9f36b;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.architecture-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;color:#71806d;font:8px var(--mono);letter-spacing:.07em}
+.architecture-card-top span:last-child{padding:5px 7px;border:1px solid #dce4d4;border-radius:99px;color:#5c7448}
+.architecture-card figcaption{margin-bottom:4px;color:#17211d;font:600 16px var(--display)}
+.architecture-summary{margin:0 0 17px;color:#69756c;font-size:10px;line-height:1.5}
+.architecture-flow{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:12px;margin:0;padding:0;list-style:none}
+.architecture-flow li{position:relative;display:flex;min-width:0;min-height:88px;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:9px 8px;border:1px solid #dce2d8;border-radius:4px;background:rgba(255,255,255,.82);color:#17211d;text-align:left}
+.architecture-step{display:grid;place-items:center;width:21px;height:21px;border:1px solid #c8d8bc;border-radius:50%;background:#eff5e9;color:#567742;font:8px var(--mono)}
+.architecture-flow li strong{font:600 10px/1.25 var(--display);overflow-wrap:anywhere}
+.architecture-flow li small{color:#6e7b70;font:8px/1.4 var(--mono);overflow-wrap:anywhere}
+.architecture-flow li:not(:last-child):after{position:absolute;top:50%;right:-10px;z-index:2;color:#648544;font:700 16px var(--sans);content:"›";transform:translate(50%,-50%)}
+.architecture-flow li.architecture-node-core{border-color:#b8cbab;background:#e8f0e1;box-shadow:inset 0 0 0 1px rgba(124,157,94,.08)}
+.architecture-flow li.architecture-node-core .architecture-step{background:#6d8c50;color:#fff;border-color:#6d8c50}
 .architecture-flow li:last-child{border-color:#c9d9bb;background:#edf3e7}
 
 /* Career progression as a vertical timeline with a clear past-to-present path. */
@@ -241,11 +250,7 @@
 .career-date{margin:0 0 9px;color:#78847a;font:9px var(--mono);letter-spacing:.04em}
 .career-company{position:relative;z-index:1;display:flex;align-items:center;gap:8px;min-height:38px;color:var(--ink);font:600 12px var(--display)}
 .company-logo{display:block;flex:0 0 36px;width:36px;height:36px;object-fit:cover;object-position:center;background:#fff;border:1px solid rgba(23,33,29,.08);border-radius:4px}
-.mallow-logo,.allen-logo{width:36px;flex-basis:36px}
-.noon-logo{width:74px;flex-basis:74px;height:34px;object-position:center}
 .square-logo{object-position:center 28%}
-.mallow-logo{width:120px;flex-basis:120px}
-.noon-logo{width:66px;flex-basis:66px}
 .career-timeline h3{margin:12px 0 5px;font:600 15px var(--display)}
 .career-timeline li>p:last-child{margin:0;color:#68746b;font-size:10px;line-height:1.55}
 
@@ -276,9 +281,9 @@
 .button-outline:hover{background:rgba(244,244,239,.08)}
 .contact-secondary{display:flex;align-items:center;gap:23px;margin-top:25px}
 @media(max-width:900px){.case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.compact-work{padding:65px 0}.case-grid{grid-template-columns:1fr}.case-image{height:225px}.case-summary{min-height:0}.engineering-section{padding:68px 0}.highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.architecture-grid{grid-template-columns:1fr}.career-section{padding-top:72px;padding-bottom:72px}.community-section{padding:68px 0}.community-grid{grid-template-columns:1fr}.contact-secondary{align-items:flex-start;flex-direction:column;gap:15px}}
-@media(max-width:520px){.highlight-grid{grid-template-columns:1fr}.career-timeline{gap:8px;padding-left:34px}.career-timeline:before{left:10px}.career-timeline li{padding:11px 12px 14px}.career-timeline li:before{top:16px;left:-30px}.career-date{margin:0 0 8px}.career-company{min-height:34px}.career-timeline h3{margin-top:8px}.case-facts{grid-template-columns:1fr}.case-flow{flex-direction:column}.case-flow b{transform:rotate(90deg)}.architecture-flow{grid-template-columns:1fr;gap:14px}.architecture-flow li:not(:last-child):after{top:auto;right:auto;bottom:-15px;left:50%;content:"↓";transform:translateX(-50%)}.contact-actions{align-items:flex-start}}
+@media(max-width:760px){.compact-work{padding:65px 0}.case-grid{grid-template-columns:1fr}.case-image{height:225px}.case-summary{min-height:0}.engineering-section{padding:68px 0}.highlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.architecture-grid{grid-template-columns:1fr}.architecture-heading{align-items:flex-start;flex-direction:column;gap:9px}.architecture-heading>p{max-width:420px}.career-section{padding-top:72px;padding-bottom:72px}.community-section{padding:68px 0}.community-grid{grid-template-columns:1fr}.contact-secondary{align-items:flex-start;flex-direction:column;gap:15px}}
+@media(max-width:520px){.highlight-grid{grid-template-columns:1fr}.career-timeline{gap:8px;padding-left:34px}.career-timeline:before{left:10px}.career-timeline li{padding:11px 12px 14px}.career-timeline li:before{top:16px;left:-30px}.career-date{margin:0 0 8px}.career-company{min-height:34px}.company-logo{width:32px;height:32px;flex-basis:32px}.career-timeline h3{margin-top:8px}.case-facts{grid-template-columns:1fr}.case-flow{flex-direction:column}.case-flow b{transform:rotate(90deg)}.architecture-flow{grid-template-columns:1fr;gap:14px}.architecture-flow li{min-height:66px;padding:10px 12px}.architecture-flow li:not(:last-child):after{top:auto;right:auto;bottom:-15px;left:50%;content:"↓";transform:translateX(-50%)}.contact-actions{align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.work-case:hover .case-image img,.highlight-card:hover,.community-item>a:hover{transform:none}}
 @media(max-width:760px){.site-header nav a[href="#career"]{display:none}}
 @media(max-width:420px){.site-header nav{gap:7px}}
-@media(max-width:520px){.highlight-card{min-height:150px}.company-logo{width:32px;height:32px;flex-basis:32px}.noon-logo{width:64px;height:30px;flex-basis:64px}}
+@media(max-width:520px){.highlight-card{min-height:150px}}
