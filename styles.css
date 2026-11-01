@@ -51,3 +51,19 @@
 .contact-link{display:inline-flex;align-items:center}
 .resume-link{white-space:nowrap}
 @media(max-width:760px){.header-socials{gap:13px}.header-social span{display:none}.availability-label{display:flex;width:max-content;margin:10px 0 0}.hero-actions{flex-wrap:wrap;row-gap:14px}.hero-actions .button{min-width:0}}
+
+/* Subtle motion adds depth while keeping the content comfortable to read. */
+.motion-enabled .reveal-on-scroll{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.motion-enabled .reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.button,.text-link,.contact-link,.header-social,.project-link{transition:color .2s ease,background-color .2s ease,transform .2s ease}
+.button:hover{transform:translateY(-2px)}
+.project-tile .tile-shot{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+.project-tile:hover .tile-shot-left{transform:translateY(-3px) rotate(-10deg)}
+.project-tile:hover .tile-shot-center{transform:translateY(-7px) scale(1.035);box-shadow:0 13px 30px rgba(16,23,19,.28)}
+.project-tile:hover .tile-shot-right{transform:translateY(-3px) rotate(10deg)}
+.availability-dot{animation:availability-pulse 2.4s ease-out infinite}
+.orbit-node{animation:node-glow 3s ease-in-out infinite alternate}
+.node-two{animation-delay:.8s}.node-three{animation-delay:1.5s}
+@keyframes availability-pulse{0%,100%{box-shadow:0 0 0 3px rgba(99,162,66,.13)}50%{box-shadow:0 0 0 6px rgba(99,162,66,.04)}}
+@keyframes node-glow{from{box-shadow:0 0 0 0 rgba(185,243,107,0)}to{box-shadow:0 0 0 6px rgba(185,243,107,.12)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-enabled .reveal-on-scroll{opacity:1;transform:none}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
