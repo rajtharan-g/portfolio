@@ -197,13 +197,24 @@
 .case-details summary::-webkit-details-marker{display:none}
 .case-details summary span{font-size:16px;color:#638941;transition:transform .2s ease}
 .case-details[open] summary span{transform:rotate(45deg)}
+.case-details summary{transition:color .2s ease}
+.case-details summary:hover,.case-details[open] summary{color:#587c39}
 .case-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
-.case-facts>div{min-width:0}
+.case-facts>div{min-width:0;padding:10px 11px;background:#f0f3ec;border-left:2px solid #b9d394;border-radius:2px}
 .case-facts dt{margin-bottom:4px;color:#6c8a50;font:9px var(--mono);letter-spacing:.05em;text-transform:uppercase}
 .case-facts dd{margin:0;color:#5b675e;font-size:10px;line-height:1.55}
 .case-flow{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:10px;background:#e9eee4;color:#354139;font:9px var(--mono);line-height:1.4;text-align:center}
 .case-flow span{flex:1}
 .case-flow b{color:#769a53}
+.case-details[open] .case-facts>div{animation:case-fact-in .38s cubic-bezier(.2,.7,.2,1) both}
+.case-details[open] .case-facts>div:nth-child(2){animation-delay:.04s}
+.case-details[open] .case-facts>div:nth-child(3){animation-delay:.08s}
+.case-details[open] .case-facts>div:nth-child(4){animation-delay:.12s}
+.case-details[open] .case-facts>div:nth-child(5){animation-delay:.16s}
+.case-details[open] .case-facts>div:nth-child(6){animation-delay:.2s}
+.case-details[open] .case-flow{animation:case-flow-in .42s .2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes case-fact-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes case-flow-in{from{opacity:0;transform:translateY(8px);filter:blur(3px)}to{opacity:1;transform:none;filter:blur(0)}}
 .compact-work>.wrap>.media-note{margin-top:16px}
 
 /* Engineering highlights and architecture snapshots. */
