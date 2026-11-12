@@ -298,3 +298,15 @@
 @media(max-width:760px){.site-header nav a[href="#career"]{display:none}}
 @media(max-width:420px){.site-header nav{gap:7px}}
 @media(max-width:520px){.highlight-card{min-height:150px}}
+
+/* Role-specific résumé downloads. */
+.resume-menu{position:relative;display:inline-block}
+.resume-menu summary{display:inline-flex;align-items:center;gap:8px;cursor:pointer;list-style:none}
+.resume-menu summary::-webkit-details-marker{display:none}
+.resume-menu summary span{font-size:14px}
+.resume-options{position:absolute;top:calc(100% + 8px);left:0;z-index:20;display:grid;min-width:190px;padding:6px;background:#fff;border:1px solid rgba(23,33,29,.14);box-shadow:0 10px 24px rgba(16,23,19,.16)}
+.resume-options a{padding:10px 12px;color:#26342b;font-size:11px;text-decoration:none;white-space:nowrap}
+.resume-options a:hover,.resume-options a:focus-visible{background:#e9eee4;color:#26342b;text-decoration:none;outline:none}
+.resume-menu summary:focus-visible,.resume-options a:focus-visible{outline:3px solid #739b43;outline-offset:3px}
+.contact-resume-menu .resume-options{background:#f8f8f4}
+@media(max-width:600px){.hero-resume-menu{z-index:5}.hero-resume-menu .resume-options{left:auto;right:0}.contact-resume-menu .resume-options{left:0;right:auto}}
