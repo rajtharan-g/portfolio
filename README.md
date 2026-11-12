@@ -16,7 +16,7 @@ After setup, each push to `main` automatically updates the live site.
 
 ## Before publishing
 
-- Review the project descriptions and metrics for accuracy and confirm they are okay to share publicly. The site offers separate mobile, iOS, and Android résumé downloads; keep their claims aligned with the portfolio.
+- Review the project descriptions and metrics for accuracy and confirm they are okay to share publicly. The site offers separate mobile, iOS, Android, and QA résumé downloads; keep their claims aligned with the portfolio.
 - The ALLEN, Noon Academy, and Square Off sections use current images from their public App Store listings. They illustrate the current apps and may not show the screens you worked on.
 - Replace any company or product links that are no longer appropriate.
 - Add project screenshots only if you have the right to share them and they contain no confidential information.
